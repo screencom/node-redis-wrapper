@@ -5,7 +5,7 @@ module.exports = function(config) {
   const factory = {
     create: function() {
       return new Promise(function(resolve, reject) {
-        console.log('Creating a new redis client');
+        // console.log('Creating a new redis client');
 
         let client;
 
@@ -42,7 +42,7 @@ module.exports = function(config) {
     },
     destroy: function(client) {
       return new Promise(function(resolve) {
-        console.log('Destroying a redis client');
+        // console.log('Destroying a redis client');
 
         client.on('end', function() {
           resolve();
